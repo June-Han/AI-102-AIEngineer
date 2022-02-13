@@ -19,7 +19,7 @@ def main():
 
 
         # Configure speech
-
+        
 
         # Get user input
         targetLanguage = ''
