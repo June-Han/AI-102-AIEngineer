@@ -42,18 +42,20 @@ def main():
 
 def TranscribeCommand():
     command = ''
+    
     '''
     # Configure speech recognition using microphone
     audio_config = speech_sdk.AudioConfig(use_default_microphone=True)
     speech_recognizer = speech_sdk.SpeechRecognizer(speech_config, audio_config)
     print('Speak now...')
     '''
+
     # Configure Speech Recognition using audiofile
     audioFile = 'time.wav'
     playsound(audioFile)
     audio_config = speech_sdk.AudioConfig(filename=audioFile)
     speech_recognizer = speech_sdk.SpeechRecognizer(speech_config, audio_config)
-
+    
     # Process speech input
     #Get the speech from voice
     speech = speech_recognizer.recognize_once_async().get()
@@ -89,6 +91,7 @@ def TellTime():
     speech_synthesizer = speech_sdk.SpeechSynthesizer(speech_config)
 
     # Synthesize spoken output
+    # Read aloud the response text through the computer speakers
     speak = speech_synthesizer.speak_text_async(response_text).get()
     if speak.reason != speech_sdk.ResultReason.SynthesizingAudioCompleted:
         print(speak.reason)
