@@ -3,6 +3,7 @@ from datetime import datetime
 import os
 '''
 https://docs.microsoft.com/en-us/azure/cognitive-services/speech-service/language-support
+https://docs.microsoft.com/en-us/azure/cognitive-services/translator/language-support
 Check the above link for the voice neurals for various languages and the translation codes used inside.
 For change of language and voice.
 '''
